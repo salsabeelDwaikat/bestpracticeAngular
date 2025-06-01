@@ -1,0 +1,10 @@
+<mat-dialog-content>
+    <p>You're about to change the value from:</p>
+    <p><strong>{{ data.oldValue }}</strong> → <strong>{{ data.newValue }}</strong></p>
+  </mat-dialog-content>
+  
+  <mat-dialog-actions align="end">
+    <button mat-button (click)="onCancel()">Cancel</button>
+    <button mat-button color="primary" (click)="onConfirm()">Confirm</button>
+  </mat-dialog-actions>
+  

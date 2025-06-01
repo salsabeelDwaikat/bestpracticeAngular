@@ -4,6 +4,7 @@ import {
 } from '@angular/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { DateTimeDialogComponent } from '../date-time-dialog/date-time-dialog.component';
+import { ConfirmEditDialogComponent } from '../confirm-edit-dialog/confirm-edit-dialog.component';
 
 import {
   ICellEditorParams,
@@ -14,7 +15,7 @@ import {
 @Component({
   selector: 'app-date-time-picker-editor',
   standalone: true,
-  imports: [MatDialogModule, DateTimeDialogComponent],
+  imports: [MatDialogModule, DateTimeDialogComponent, ConfirmEditDialogComponent],
   template: '',
 })
 export class DateTimePickerEditorComponent
@@ -22,59 +23,58 @@ export class DateTimePickerEditorComponent
 {
   private params!: ICellEditorParams;
   private value: string = '';
+  private originalValue: string = '';
 
   constructor(private dialog: MatDialog) {}
-  refresh?(params: ICellEditorParams<any, any, any>): void {
-    throw new Error('Method not implemented.');
-  }
-  afterGuiAttached?(): void {
-    throw new Error('Method not implemented.');
-  }
-  getPopupPosition?(): 'over' | 'under' | undefined {
-    throw new Error('Method not implemented.');
-  }
-  isCancelBeforeStart?(): boolean {
-    throw new Error('Method not implemented.');
-  }
-  isCancelAfterEnd?(): boolean {
-    throw new Error('Method not implemented.');
-  }
-  focusIn?(): void {
-    throw new Error('Method not implemented.');
-  }
-  focusOut?(): void {
-    throw new Error('Method not implemented.');
-  }
-  getGui(): HTMLElement {
-    throw new Error('Method not implemented.');
-  }
-  destroy?(): void {
-    throw new Error('Method not implemented.');
-  }
-  init?(params: ICellEditorParams<any, any, any>): AgPromise<void> | void {
-    throw new Error('Method not implemented.');
-  }
 
   agInit(params: ICellEditorParams): void {
     this.params = params;
     this.value = params.value || '';
+    this.originalValue = this.value;
   }
 
   ngAfterViewInit(): void {
-    setTimeout(() => this.openDialog(), 0);
+    setTimeout(() => this.openDateTimeDialog(), 0);
   }
 
-  openDialog(): void {
+  openDateTimeDialog(): void {
     const dialogRef = this.dialog.open(DateTimeDialogComponent, {
       width: '300px',
       data: { dateTime: this.value },
     });
 
-    dialogRef.afterClosed().subscribe((result: string | undefined) => {
-      if (result) {
-        this.value = result;
+    dialogRef.afterClosed().subscribe((newDateTime: string | undefined) => {
+      if (!newDateTime || newDateTime === this.originalValue) {
+        this.params.api!.stopEditing(true); // cancel if no change or no value
+        return;
       }
-      this.params.api!.stopEditing(); 
+
+      const confirmRef = this.dialog.open(ConfirmEditDialogComponent, {
+        data: {
+          oldValue: this.originalValue,
+          newValue: newDateTime,
+        },
+      });
+
+      confirmRef.afterClosed().subscribe((confirmResult: string) => {
+        if (confirmResult === 'confirm') {
+          this.value = newDateTime;
+
+          // ✅ Suppress confirmation dialog in CarGridComponent
+          if (
+            this.params.context &&
+            this.params.context.componentParent &&
+            'suppressConfirmationDialog' in this.params.context.componentParent
+          ) {
+            this.params.context.componentParent.suppressConfirmationDialog = true;
+          }
+
+          this.params.node.setDataValue(this.params.colDef.field!, newDateTime);
+          this.params.api!.stopEditing();
+        } else {
+          this.params.api!.stopEditing(true);
+        }
+      });
     });
   }
 
@@ -85,4 +85,16 @@ export class DateTimePickerEditorComponent
   isPopup(): boolean {
     return true;
   }
+
+  // Stub methods for interface completeness
+  refresh?(params: ICellEditorParams<any, any, any>): void {}
+  afterGuiAttached?(): void {}
+  getPopupPosition?(): 'over' | 'under' | undefined { return 'over'; }
+  isCancelBeforeStart?(): boolean { return false; }
+  isCancelAfterEnd?(): boolean { return false; }
+  focusIn?(): void {}
+  focusOut?(): void {}
+  getGui(): HTMLElement { return document.createElement('div'); }
+  destroy?(): void {}
+  init?(params: ICellEditorParams<any, any, any>): AgPromise<void> | void {}
 }

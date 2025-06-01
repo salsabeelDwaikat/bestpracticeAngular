@@ -1,21 +1,19 @@
+<h2 mat-dialog-title>Select Date and Time</h2>
 <mat-dialog-content>
-    <mat-form-field appearance="fill" class="w-full">
-      <mat-label>Date</mat-label>
-      <input matInput [matDatepicker]="picker" [(ngModel)]="selectedDate">
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
-  
-    <mat-form-field appearance="fill" class="w-full">
-      <mat-label>Time</mat-label>
-      <input matInput type="time" [(ngModel)]="selectedTime">
-    </mat-form-field>
-  </mat-dialog-content>
-  
-  <mat-dialog-actions align="end">
-    <button mat-button mat-dialog-close>Cancel</button>
-    <button mat-raised-button color="primary" [mat-dialog-close]="{ date: selectedDate, time: selectedTime }">
-      Save
-    </button>
-  </mat-dialog-actions>
-  
+  <mat-form-field appearance="fill" class="w-full">
+    <mat-label>Date</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="selectedDate" />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="w-full">
+    <mat-label>Time (HH:mm)</mat-label>
+    <input matInput type="time" [(ngModel)]="selectedTime" />
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button color="primary" (click)="onConfirm()">Confirm</button>
+</mat-dialog-actions>

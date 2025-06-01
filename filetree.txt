@@ -285,7 +285,9 @@
 │  │  │  ├── core.module.ts
 │  │  │  ├── /services/
 │  │  │  │  ├── auth.guard.spec.ts
-│  │  │  │  └── auth.guard.ts
+│  │  │  │  ├── auth.guard.ts
+│  │  │  │  ├── auth.service.spec.ts
+│  │  │  │  └── auth.service.ts
 │  │  ├── /features/
 │  │  │  ├── /auth/
 │  │  │  │  ├── auth-routing.module.ts

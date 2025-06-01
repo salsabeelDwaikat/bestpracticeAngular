@@ -16,6 +16,8 @@ import { DateTimePickerEditorComponent } from '../components/date-time-editor/da
 import { Car, CarService } from '../services/car.service';
 
 import { forkJoin } from 'rxjs';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { ConfirmEditDialogComponent } from '../components/confirm-edit-dialog/confirm-edit-dialog.component';
 
 @Component({
   selector: 'app-car-grid',
@@ -27,6 +29,7 @@ import { forkJoin } from 'rxjs';
     MatSelectModule,
     CarMakeEditorComponent,
     DateTimePickerEditorComponent,
+    MatDialogModule
   ],
   templateUrl: './car-grid.component.html',
   styleUrls: ['./car-grid.component.css'],
@@ -36,6 +39,9 @@ export class CarGridComponent implements OnInit {
   rowData: Car[] = [];
   loading: boolean = false;
   gridApi: any;
+
+  // ✅ Flag to suppress confirmation dialog
+  suppressConfirmationDialog: boolean = false;
 
   columnDefs: ColDef[] = [
     {
@@ -83,7 +89,8 @@ export class CarGridComponent implements OnInit {
 
   constructor(
     private carService: CarService,
-    @Inject(PLATFORM_ID) private platformId: Object
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private dialog: MatDialog
   ) {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
@@ -124,16 +131,38 @@ export class CarGridComponent implements OnInit {
 
   onCellValueChanged(event: CellValueChangedEvent) {
     const updatedCar = event.data;
-    if (updatedCar?.id) {
+    const colId = event.colDef.field!;
+    const oldValue = event.oldValue;
+    const newValue = event.newValue;
+
+    if (oldValue === newValue || !updatedCar?.id) return;
+
+    // ✅ Suppress confirmation dialog if editing via popup
+    if (this.suppressConfirmationDialog) {
+      this.suppressConfirmationDialog = false;
       this.carService.updateCar(updatedCar.id, updatedCar).subscribe({
-        next: () => {
-          console.log('✅ Car updated:', updatedCar);
-        },
-        error: (err) => {
-          console.error('❌ Failed to update car:', err);
-        },
+        next: () => console.log('✅ Car updated silently:', updatedCar),
+        error: (err) => console.error('❌ Failed to update car:', err),
       });
+      return;
     }
+
+    const dialogRef = this.dialog.open(ConfirmEditDialogComponent, {
+      data: { oldValue, newValue },
+      width: '300px',
+    });
+
+    dialogRef.afterClosed().subscribe((confirmed: boolean) => {
+      if (confirmed) {
+        this.carService.updateCar(updatedCar.id, updatedCar).subscribe({
+          next: () => console.log('✅ Car updated:', updatedCar),
+          error: (err) => console.error('❌ Failed to update car:', err),
+        });
+      } else {
+        updatedCar[colId] = oldValue;
+        this.gridApi.refreshCells({ force: true });
+      }
+    });
   }
 
   onAddCar() {
