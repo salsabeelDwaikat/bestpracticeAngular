@@ -1,0 +1,289 @@
+├── /.angular/
+│  ├── /cache/
+│  │  ├── /19.2.14/
+│  │  │  ├── /car-app/
+│  │  │  │  ├── .tsbuildinfo
+│  │  │  │  ├── /vite/
+│  │  │  │  │  ├── /deps/
+│  │  │  │  │  │  ├── @angular_cdk_bidi.js
+│  │  │  │  │  │  ├── @angular_cdk_bidi.js.map
+│  │  │  │  │  │  ├── @angular_cdk_scrolling.js
+│  │  │  │  │  │  ├── @angular_cdk_scrolling.js.map
+│  │  │  │  │  │  ├── @angular_cdk_text-field.js
+│  │  │  │  │  │  ├── @angular_cdk_text-field.js.map
+│  │  │  │  │  │  ├── @angular_common.js
+│  │  │  │  │  │  ├── @angular_common.js.map
+│  │  │  │  │  │  ├── @angular_common_http.js
+│  │  │  │  │  │  ├── @angular_common_http.js.map
+│  │  │  │  │  │  ├── @angular_core.js
+│  │  │  │  │  │  ├── @angular_core.js.map
+│  │  │  │  │  │  ├── @angular_forms.js
+│  │  │  │  │  │  ├── @angular_forms.js.map
+│  │  │  │  │  │  ├── @angular_material_button.js
+│  │  │  │  │  │  ├── @angular_material_button.js.map
+│  │  │  │  │  │  ├── @angular_material_card.js
+│  │  │  │  │  │  ├── @angular_material_card.js.map
+│  │  │  │  │  │  ├── @angular_material_form-field.js
+│  │  │  │  │  │  ├── @angular_material_form-field.js.map
+│  │  │  │  │  │  ├── @angular_material_icon.js
+│  │  │  │  │  │  ├── @angular_material_icon.js.map
+│  │  │  │  │  │  ├── @angular_material_input.js
+│  │  │  │  │  │  ├── @angular_material_input.js.map
+│  │  │  │  │  │  ├── @angular_material_list.js
+│  │  │  │  │  │  ├── @angular_material_list.js.map
+│  │  │  │  │  │  ├── @angular_material_select.js
+│  │  │  │  │  │  ├── @angular_material_select.js.map
+│  │  │  │  │  │  ├── @angular_material_sidenav.js
+│  │  │  │  │  │  ├── @angular_material_sidenav.js.map
+│  │  │  │  │  │  ├── @angular_material_toolbar.js
+│  │  │  │  │  │  ├── @angular_material_toolbar.js.map
+│  │  │  │  │  │  ├── @angular_platform-browser.js
+│  │  │  │  │  │  ├── @angular_platform-browser.js.map
+│  │  │  │  │  │  ├── @angular_router.js
+│  │  │  │  │  │  ├── @angular_router.js.map
+│  │  │  │  │  │  ├── _metadata.json
+│  │  │  │  │  │  ├── ag-grid-angular.js
+│  │  │  │  │  │  ├── ag-grid-angular.js.map
+│  │  │  │  │  │  ├── ag-grid-community.js
+│  │  │  │  │  │  ├── ag-grid-community.js.map
+│  │  │  │  │  │  ├── ag-grid-enterprise.js
+│  │  │  │  │  │  ├── ag-grid-enterprise.js.map
+│  │  │  │  │  │  ├── chunk-224OF2CP.js
+│  │  │  │  │  │  ├── chunk-224OF2CP.js.map
+│  │  │  │  │  │  ├── chunk-2O4WY5GE.js
+│  │  │  │  │  │  ├── chunk-2O4WY5GE.js.map
+│  │  │  │  │  │  ├── chunk-35PP573H.js
+│  │  │  │  │  │  ├── chunk-35PP573H.js.map
+│  │  │  │  │  │  ├── chunk-5QXQOMPN.js
+│  │  │  │  │  │  ├── chunk-5QXQOMPN.js.map
+│  │  │  │  │  │  ├── chunk-6DHTSDOP.js
+│  │  │  │  │  │  ├── chunk-6DHTSDOP.js.map
+│  │  │  │  │  │  ├── chunk-74C2F6A4.js
+│  │  │  │  │  │  ├── chunk-74C2F6A4.js.map
+│  │  │  │  │  │  ├── chunk-DDFAHOCI.js
+│  │  │  │  │  │  ├── chunk-DDFAHOCI.js.map
+│  │  │  │  │  │  ├── chunk-DSKN56PE.js
+│  │  │  │  │  │  ├── chunk-DSKN56PE.js.map
+│  │  │  │  │  │  ├── chunk-GBANFASH.js
+│  │  │  │  │  │  ├── chunk-GBANFASH.js.map
+│  │  │  │  │  │  ├── chunk-HW4NBKKX.js
+│  │  │  │  │  │  ├── chunk-HW4NBKKX.js.map
+│  │  │  │  │  │  ├── chunk-IBYU652R.js
+│  │  │  │  │  │  ├── chunk-IBYU652R.js.map
+│  │  │  │  │  │  ├── chunk-IQCG7XST.js
+│  │  │  │  │  │  ├── chunk-IQCG7XST.js.map
+│  │  │  │  │  │  ├── chunk-K6KWQN43.js
+│  │  │  │  │  │  ├── chunk-K6KWQN43.js.map
+│  │  │  │  │  │  ├── chunk-KFNQRLNA.js
+│  │  │  │  │  │  ├── chunk-KFNQRLNA.js.map
+│  │  │  │  │  │  ├── chunk-MNYYNOOB.js
+│  │  │  │  │  │  ├── chunk-MNYYNOOB.js.map
+│  │  │  │  │  │  ├── chunk-P6U2JBMQ.js
+│  │  │  │  │  │  ├── chunk-P6U2JBMQ.js.map
+│  │  │  │  │  │  ├── chunk-QG27OWD3.js
+│  │  │  │  │  │  ├── chunk-QG27OWD3.js.map
+│  │  │  │  │  │  ├── chunk-QZ2E34AJ.js
+│  │  │  │  │  │  ├── chunk-QZ2E34AJ.js.map
+│  │  │  │  │  │  ├── chunk-T4YKZDR6.js
+│  │  │  │  │  │  ├── chunk-T4YKZDR6.js.map
+│  │  │  │  │  │  ├── chunk-UECZVIIU.js
+│  │  │  │  │  │  ├── chunk-UECZVIIU.js.map
+│  │  │  │  │  │  ├── chunk-UQWNYCER.js
+│  │  │  │  │  │  ├── chunk-UQWNYCER.js.map
+│  │  │  │  │  │  ├── chunk-WDMUDEB6.js
+│  │  │  │  │  │  ├── chunk-WDMUDEB6.js.map
+│  │  │  │  │  │  ├── chunk-ZD5GU2Q3.js
+│  │  │  │  │  │  ├── chunk-ZD5GU2Q3.js.map
+│  │  │  │  │  │  ├── package.json
+│  │  │  │  │  │  ├── rxjs.js
+│  │  │  │  │  │  └── rxjs.js.map
+│  │  │  │  │  ├── /deps_ssr/
+│  │  │  │  │  │  ├── @angular_cdk_bidi.js
+│  │  │  │  │  │  ├── @angular_cdk_bidi.js.map
+│  │  │  │  │  │  ├── @angular_cdk_scrolling.js
+│  │  │  │  │  │  ├── @angular_cdk_scrolling.js.map
+│  │  │  │  │  │  ├── @angular_cdk_text-field.js
+│  │  │  │  │  │  ├── @angular_cdk_text-field.js.map
+│  │  │  │  │  │  ├── @angular_common.js
+│  │  │  │  │  │  ├── @angular_common.js.map
+│  │  │  │  │  │  ├── @angular_common_http.js
+│  │  │  │  │  │  ├── @angular_common_http.js.map
+│  │  │  │  │  │  ├── @angular_core.js
+│  │  │  │  │  │  ├── @angular_core.js.map
+│  │  │  │  │  │  ├── @angular_forms.js
+│  │  │  │  │  │  ├── @angular_forms.js.map
+│  │  │  │  │  │  ├── @angular_material_button.js
+│  │  │  │  │  │  ├── @angular_material_button.js.map
+│  │  │  │  │  │  ├── @angular_material_card.js
+│  │  │  │  │  │  ├── @angular_material_card.js.map
+│  │  │  │  │  │  ├── @angular_material_form-field.js
+│  │  │  │  │  │  ├── @angular_material_form-field.js.map
+│  │  │  │  │  │  ├── @angular_material_icon.js
+│  │  │  │  │  │  ├── @angular_material_icon.js.map
+│  │  │  │  │  │  ├── @angular_material_input.js
+│  │  │  │  │  │  ├── @angular_material_input.js.map
+│  │  │  │  │  │  ├── @angular_material_list.js
+│  │  │  │  │  │  ├── @angular_material_list.js.map
+│  │  │  │  │  │  ├── @angular_material_select.js
+│  │  │  │  │  │  ├── @angular_material_select.js.map
+│  │  │  │  │  │  ├── @angular_material_sidenav.js
+│  │  │  │  │  │  ├── @angular_material_sidenav.js.map
+│  │  │  │  │  │  ├── @angular_material_toolbar.js
+│  │  │  │  │  │  ├── @angular_material_toolbar.js.map
+│  │  │  │  │  │  ├── @angular_platform-browser.js
+│  │  │  │  │  │  ├── @angular_platform-browser.js.map
+│  │  │  │  │  │  ├── @angular_platform-server.js
+│  │  │  │  │  │  ├── @angular_platform-server.js.map
+│  │  │  │  │  │  ├── @angular_router.js
+│  │  │  │  │  │  ├── @angular_router.js.map
+│  │  │  │  │  │  ├── @angular_ssr.js
+│  │  │  │  │  │  ├── @angular_ssr.js.map
+│  │  │  │  │  │  ├── @angular_ssr_node.js
+│  │  │  │  │  │  ├── @angular_ssr_node.js.map
+│  │  │  │  │  │  ├── _metadata.json
+│  │  │  │  │  │  ├── ag-grid-angular.js
+│  │  │  │  │  │  ├── ag-grid-angular.js.map
+│  │  │  │  │  │  ├── ag-grid-enterprise.js
+│  │  │  │  │  │  ├── ag-grid-enterprise.js.map
+│  │  │  │  │  │  ├── chunk-7EJ3XDN3.js
+│  │  │  │  │  │  ├── chunk-7EJ3XDN3.js.map
+│  │  │  │  │  │  ├── chunk-AQYIT73X.js
+│  │  │  │  │  │  ├── chunk-AQYIT73X.js.map
+│  │  │  │  │  │  ├── chunk-AXBSHL2C.js
+│  │  │  │  │  │  ├── chunk-AXBSHL2C.js.map
+│  │  │  │  │  │  ├── chunk-CES2DQQV.js
+│  │  │  │  │  │  ├── chunk-CES2DQQV.js.map
+│  │  │  │  │  │  ├── chunk-DZYTNK7T.js
+│  │  │  │  │  │  ├── chunk-DZYTNK7T.js.map
+│  │  │  │  │  │  ├── chunk-EHRUUTLS.js
+│  │  │  │  │  │  ├── chunk-EHRUUTLS.js.map
+│  │  │  │  │  │  ├── chunk-FAWMDZNK.js
+│  │  │  │  │  │  ├── chunk-FAWMDZNK.js.map
+│  │  │  │  │  │  ├── chunk-FXBIGXUK.js
+│  │  │  │  │  │  ├── chunk-FXBIGXUK.js.map
+│  │  │  │  │  │  ├── chunk-IYLS2FG4.js
+│  │  │  │  │  │  ├── chunk-IYLS2FG4.js.map
+│  │  │  │  │  │  ├── chunk-JME5XKN5.js
+│  │  │  │  │  │  ├── chunk-JME5XKN5.js.map
+│  │  │  │  │  │  ├── chunk-KSSBASK3.js
+│  │  │  │  │  │  ├── chunk-KSSBASK3.js.map
+│  │  │  │  │  │  ├── chunk-NMUC2A3P.js
+│  │  │  │  │  │  ├── chunk-NMUC2A3P.js.map
+│  │  │  │  │  │  ├── chunk-OPFCNNUL.js
+│  │  │  │  │  │  ├── chunk-OPFCNNUL.js.map
+│  │  │  │  │  │  ├── chunk-POUHVWWY.js
+│  │  │  │  │  │  ├── chunk-POUHVWWY.js.map
+│  │  │  │  │  │  ├── chunk-SWIVHK54.js
+│  │  │  │  │  │  ├── chunk-SWIVHK54.js.map
+│  │  │  │  │  │  ├── chunk-TSDW7S4V.js
+│  │  │  │  │  │  ├── chunk-TSDW7S4V.js.map
+│  │  │  │  │  │  ├── chunk-UPULFSDA.js
+│  │  │  │  │  │  ├── chunk-UPULFSDA.js.map
+│  │  │  │  │  │  ├── chunk-UUTP3235.js
+│  │  │  │  │  │  ├── chunk-UUTP3235.js.map
+│  │  │  │  │  │  ├── chunk-V6BGG4CY.js
+│  │  │  │  │  │  ├── chunk-V6BGG4CY.js.map
+│  │  │  │  │  │  ├── chunk-WJH7JFDQ.js
+│  │  │  │  │  │  ├── chunk-WJH7JFDQ.js.map
+│  │  │  │  │  │  ├── chunk-XVX327SV.js
+│  │  │  │  │  │  ├── chunk-XVX327SV.js.map
+│  │  │  │  │  │  ├── chunk-XZIY4MOL.js
+│  │  │  │  │  │  ├── chunk-XZIY4MOL.js.map
+│  │  │  │  │  │  ├── chunk-XZM2BRFG.js
+│  │  │  │  │  │  ├── chunk-XZM2BRFG.js.map
+│  │  │  │  │  │  ├── chunk-YHCV7DAQ.js
+│  │  │  │  │  │  ├── chunk-YHCV7DAQ.js.map
+│  │  │  │  │  │  ├── chunk-ZAUMHWVA.js
+│  │  │  │  │  │  ├── chunk-ZAUMHWVA.js.map
+│  │  │  │  │  │  ├── chunk-ZPTMXRM4.js
+│  │  │  │  │  │  ├── chunk-ZPTMXRM4.js.map
+│  │  │  │  │  │  ├── express.js
+│  │  │  │  │  │  ├── express.js.map
+│  │  │  │  │  │  ├── package.json
+│  │  │  │  │  │  ├── rxjs.js
+│  │  │  │  │  │  ├── rxjs.js.map
+│  │  │  │  │  │  ├── xhr2-TXIMV6CV.js
+│  │  │  │  │  │  └── xhr2-TXIMV6CV.js.map
+├── .editorconfig
+├── /.git/
+├── .gitignore
+├── /.vscode/
+│  ├── extensions.json
+│  ├── launch.json
+│  └── tasks.json
+├── README.md
+├── angular.json
+├── filetree.txt
+├── /node_modules/
+├── package-lock.json
+├── package.json
+├── /public/
+│  └── favicon.ico
+├── /src/
+│  ├── /app/
+│  │  ├── app.component.css
+│  │  ├── app.component.html
+│  │  ├── app.component.spec.ts
+│  │  ├── app.component.ts
+│  │  ├── app.config.server.ts
+│  │  ├── app.config.ts
+│  │  ├── app.routes.server.ts
+│  │  ├── app.routes.ts
+│  │  ├── /core/
+│  │  │  ├── core.module.ts
+│  │  │  └── /services/
+│  │  ├── /features/
+│  │  │  ├── /auth/
+│  │  │  │  ├── auth-routing.module.ts
+│  │  │  │  ├── auth.module.ts
+│  │  │  │  ├── /login/
+│  │  │  │  │  ├── login.component.css
+│  │  │  │  │  ├── login.component.html
+│  │  │  │  │  ├── login.component.spec.ts
+│  │  │  │  │  └── login.component.ts
+│  │  │  │  ├── /register/
+│  │  │  │  │  ├── register.component.css
+│  │  │  │  │  ├── register.component.html
+│  │  │  │  │  ├── register.component.spec.ts
+│  │  │  │  │  └── register.component.ts
+│  │  │  ├── /car-grid/
+│  │  │  │  ├── /car-grid/
+│  │  │  │  │  ├── car-grid.component.css
+│  │  │  │  │  ├── car-grid.component.html
+│  │  │  │  │  ├── car-grid.component.spec.ts
+│  │  │  │  │  └── car-grid.component.ts
+│  │  │  │  ├── /components/
+│  │  │  │  │  ├── /car-make-editor/
+│  │  │  │  │  │  ├── car-make-editor.component.css
+│  │  │  │  │  │  ├── car-make-editor.component.html
+│  │  │  │  │  │  ├── car-make-editor.component.spec.ts
+│  │  │  │  │  │  └── car-make-editor.component.ts
+│  │  │  │  ├── /services/
+│  │  │  │  │  ├── car.service.spec.ts
+│  │  │  │  │  └── car.service.ts
+│  │  │  ├── /home/
+│  │  │  │  ├── /home/
+│  │  │  │  │  ├── home.component.css
+│  │  │  │  │  ├── home.component.html
+│  │  │  │  │  ├── home.component.spec.ts
+│  │  │  │  │  └── home.component.ts
+│  │  │  │  └── home.module.ts
+│  │  ├── /shared/
+│  │  │  ├── /layout/
+│  │  │  │  ├── /sidenav/
+│  │  │  │  │  ├── sidenav.component.css
+│  │  │  │  │  ├── sidenav.component.html
+│  │  │  │  │  ├── sidenav.component.spec.ts
+│  │  │  │  │  └── sidenav.component.ts
+│  │  │  └── shared.module.ts
+│  ├── /environments/
+│  │  ├── environment.prod.ts
+│  │  └── environment.ts
+│  ├── index.html
+│  ├── main.server.ts
+│  ├── main.ts
+│  ├── server.ts
+│  └── styles.css
+├── tsconfig.app.json
+├── tsconfig.json
+└── tsconfig.spec.json

@@ -1,0 +1,14 @@
+<mat-form-field appearance="fill" style="width: 100%;">
+    <mat-label>Make</mat-label>
+    <mat-select
+      [value]="value"
+      (selectionChange)="onSelectionChange($event)"
+      (blur)="onBlur()"
+      autofocus
+    >
+      <mat-option *ngFor="let make of makes" [value]="make">
+        {{ make }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  
