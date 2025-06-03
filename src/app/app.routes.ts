@@ -7,9 +7,10 @@ import { AuthGuard } from './core/services/auth.guard';
 export const routes: Routes = [
   {
     path: 'home',
+    canActivate: [AuthGuard],
     loadChildren: () =>
       import('./features/home/home.module').then(m => m.HomeModule),
-    canActivate: [AuthGuard] 
+     
   },
   {
     path: 'car-grid',
